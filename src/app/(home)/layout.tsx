@@ -4,7 +4,7 @@ import SideBar from '@/components/layout/SideBar'
 export default function layout({children}) {
   return (
     <div>
-      <div className=' bg-red-200 flex  '> 
+      <div className='  flex  '> 
 
         <div>
         <SideBar/>

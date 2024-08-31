@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        prime: '#fff9f9', // Custom color example
+        sec: '#ffe3e3', // Another custom color example
+        accent: '#D97706', // Add as many colors as needed
+       
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

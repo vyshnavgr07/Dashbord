@@ -1,6 +1,6 @@
 "use client";
-
 import React from 'react';
+import {  useRouter} from 'next/navigation';
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -10,9 +10,8 @@ import {
   CDBSidebarMenuItem,
 } from 'cdbreact';
 
-
 const SideBar = () => {
-
+  const router = useRouter();  
 
   return (
     <div
@@ -20,44 +19,43 @@ const SideBar = () => {
         display: 'flex',
         height: '100vh',
         overflow: 'scroll initial',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',   
         borderRight: '4px solid #e2e8f0',
       }}
     >
-      <CDBSidebar textColor="000" backgroundColor="#00FFFF">
+      <CDBSidebar textColor="#000" backgroundColor="#fff9f9">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-          <div
-            className="text-decoration-none"
-            style={{ color: 'inherit', cursor: 'pointer' }}
-            onClick={() => router.push('/')}
-          >
-            Blog up
-          </div>
+     
         </CDBSidebarHeader>
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
             <CDBSidebarMenuItem
+              onClick={() => router.push('/')}
               icon="fas fa-tachometer-alt"
               style={{ cursor: 'pointer' }}
             >
               Dashboard
             </CDBSidebarMenuItem>
+
             <CDBSidebarMenuItem
+              onClick={() => router.push('/settings')}
               icon="user"
               style={{ cursor: 'pointer' }}
             >
-              Profile
+             settings
             </CDBSidebarMenuItem>
+
             <CDBSidebarMenuItem
+           
               icon="fas fa-bell"
               style={{ cursor: 'pointer' }}
             >
-              Create Blog
+               Profile
             </CDBSidebarMenuItem>
             <CDBSidebarMenuItem
+             
               icon="sign-out-alt"
-              onClick={() => router.push('/login')}
               style={{ cursor: 'pointer' }}
             >
               Login
