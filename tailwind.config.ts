@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        prime: '#fff9f9', // Custom color example
-        sec: '#ffe3e3', // Another custom color example
-        accent: '#D97706', // Add as many colors as needed
+        prime: '#fff9f9',
+        sec: '#ffe3e3', 
+        accent: '#D97706', 
        
       },
       backgroundImage: {
@@ -22,7 +22,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function({ addUtilities }) {
+    function({ addUtilities }:any) {
       addUtilities(
         {
           '.hide-scrollbar': {

@@ -1,7 +1,9 @@
 import React from 'react'
 import SideBar from '@/components/layout/SideBar'
 
-export default function layout({children}) {
+export default function layout({children}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <div>
       <div className='  flex  '> 
